@@ -1,0 +1,17 @@
+{
+  "name": "histogram-bucket-counter",
+  "version": "0.1.0",
+  "description": "Maintains a fixed set of boundary-defined buckets and increments the appropriate bucket for each recorded value, returning counts per bucket on demand.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {}
+}
