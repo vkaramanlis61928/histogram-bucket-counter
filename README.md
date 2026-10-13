@@ -62,3 +62,10 @@ not bucket 2. The first bucket is open at `-Infinity` and the last is open at
 `+Infinity`, so `±Infinity` are always accepted and routed to the ends. `NaN`
 is rejected, because it belongs to no bucket and silently dropping it would
 mask caller bugs.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
